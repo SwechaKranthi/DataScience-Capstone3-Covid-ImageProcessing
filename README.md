@@ -94,3 +94,24 @@ Thank you to Raghunandhan Patthar for being an awesome Springboard Mentor. Thank
 
 
 
+
+Future trials:
+
+try voting classifier systems
+
+# Create empty lists that will storage the different weights
+
+weights1 = []
+weights2 = []
+weights3 = []
+scores = []
+
+# Create a for loop to evaluate different combinations of weights
+
+for i in np.arange(0.1,1, 0.1):
+    for j in np.arange(0.1,1, 0.1):
+        for k in np.arange(0.1,1, 0.1):
+            clf_voting = VotingClassifier(estimators = [('est1', clf1), ('est2', clf2),
+                                           ('est3', clf3)], voting = 'soft', weights = [i, j, k])
+            clf_voting
+
